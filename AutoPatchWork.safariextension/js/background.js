@@ -163,7 +163,7 @@ var ToggleCode = '(' + (function () {
   document.dispatchEvent(ev);
 }).toString() + ')();';
 
-g.chrome && chrome.extension.onMessage.addListener(handleMessage);
+g.chrome && chrome.runtime.onMessage.addListener(handleMessage);
 
 g.safari && safari.application.addEventListener("message", function (evt) {
   var name = evt.name;
